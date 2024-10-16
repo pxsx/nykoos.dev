@@ -13,12 +13,10 @@ import Experience from '../components/Experience.astro';
 		</div>
 
 		<ul class="social-list">
-			<Social title="GitHub" href='https://github.com/nykoos' iconClass='fa-brands fa-github' color="#24292e"/>
-			<Social title="Discord" href='https://discord.com/users/847352850812370954' iconClass='fa-brands fa-discord' color="#5865F2"/>
-			<Social title="Email" href='mailto:contact@nykoos.dev' iconClass='fa-solid fa-envelope' color="#D44638"/>
+			<Social title="GitHub" href='https://github.com/nykoos' path='github.svg' color="#24292e"/>
+			<Social title="Discord" href='https://discord.com/users/847352850812370954' path='discord.svg' color="#5865F2"/>
+			<Social title="Email" href='mailto:contact@nykoos.dev' path='envelope.svg' color="#D44638"/>
 		</ul>
-
-		<br>
 
 		<div>
 			<h2>Experiences</h2>
@@ -64,16 +62,6 @@ import Experience from '../components/Experience.astro';
         justify-content: center; /* Center vertically */
         align-items: center; /* Center horizontally */
         min-height: 100vh; /* Full viewport height */
-
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
 	}
 	h1 {
 		font-size: 4rem;
