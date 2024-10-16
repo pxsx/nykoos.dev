@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 # visual studio code setting folder
 .vscode/
+.netlify/

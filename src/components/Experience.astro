@@ -10,7 +10,7 @@ const { name, href, path } = Astro.props;
 
 <div class="experience">
     <a href={href} class="icon-link" target="_blank" rel="noopener noreferrer">
-        <img src=`/experiences/${path}` class="icon" />
+        <img src=`/experiences/${path}` class="icon" alt={name}/>
     </a>
 </div>
 
