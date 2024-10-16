@@ -1,0 +1,154 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Social from '../components/Social.astro';
+import Project from '../components/Project.astro';
+import Experience from '../components/Experience.astro';
+---
+
+<Layout title="Whats up">
+	<main>
+		<h1> Hi, I'm <a class="text-gradient">Nikos</a>.</h1>
+		<div class="center">
+			<a style={"margin-bottom: 1rm"}>I'm a <strong>backend developer</strong> and <strong> high school student</strong> from Germany.</a>
+		</div>
+
+		<ul class="social-list">
+			<Social title="GitHub" href='https://github.com/nykoos' iconClass='fa-brands fa-github' color="#24292e"/>
+			<Social title="Discord" href='https://discord.com/users/847352850812370954' iconClass='fa-brands fa-discord' color="#5865F2"/>
+			<Social title="Email" href='mailto:contact@nykoos.dev' iconClass='fa-solid fa-envelope' color="#D44638"/>
+		</ul>
+
+		<br>
+
+		<div>
+			<h2>Experiences</h2>
+			<p> The languages and tools I've already worked with</p>
+			<div class="project-group">
+				<Experience name='Python' href='https://python.org/' path='python.svg'/>
+				<Experience name='Golang' href='https://go.dev/' path='go.svg'/>
+				<Experience name='Typescript' href='https://www.typescriptlang.org/' path='typescript.svg'/>
+				<Experience name='Javascript' href='https://developer.mozilla.org/en-US/docs/Web/JavaScript' path='javascript.svg'/>
+				<Experience name='HTML5' href='https://de.wikipedia.org/wiki/HTML5' path='html.svg'/>
+				<Experience name='CSS3' href='https://de.wikipedia.org/wiki/Cascading_Style_Sheets#CSS3' path='css.svg'/>
+				<Experience name='PostgreSQL' href='https://www.postgresql.org/' path='postgresql.svg'/>
+				<Experience name='Redis' href='https://redis.io/' path='redis.svg'/>
+				<Experience name='Docker' href='https://www.docker.com/' path='docker.svg'/>
+			</div>
+		</div>
+
+		<div>
+			<h2>Projects</h2>
+			<p> Some of the projects I am currently working on or have worked on in the past</p>
+			<div class="project-group">
+			<Project title="🍪 Cookie" href="https://cookieapp.me" desc="A Discord bot that offers many features for your server. Collect cookies and much more!" gradient_start='#dc9542' gradient_end="#13151A"/>
+			<Project title="🐝 BeeParty" desc="I've developed the Discord bot of this Minecraft server network." gradient_start='#ffbf27' gradient_end="#13151A"/>
+			</div>
+		</div>
+
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		min-width: 450px;
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+
+		display: flex; /* Enable flexbox for vertical centering */
+        flex-direction: column; /* Arrange items vertically */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        min-height: 100vh; /* Full viewport height */
+
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1rm;
+	}
+	h2 {
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1rm;
+	}
+	p {
+		text-align: center;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+		transition: background-position 0.5s ease;
+	}
+	.text-gradient:hover {
+    background-position: 100%; /* Changes the gradient position smoothly */
+}
+	.project-group {
+		display: flex;
+		flex-wrap: wrap; /* Allows the items to wrap if the space is not enough */
+		gap: 20px; /* Adds space between the project cards */
+		justify-content: center; /* Center the projects horizontally */
+	}
+
+	.experience-group {
+		display: flex;
+		flex-wrap: wrap; /* Allows the items to wrap if the space is not enough */
+		gap: 10px; /* Adds space between the project cards */
+		justify-content: center; /* Center the projects horizontally */
+	}
+
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	.center {
+		text-align: center;
+	}
+	.social-list {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	list-style: none;
+	padding: 0;
+	}
+</style>
