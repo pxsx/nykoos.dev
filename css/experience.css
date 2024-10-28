@@ -1,0 +1,19 @@
+.experience {
+    display: flex; /* Changed from position: flex to display: flex */
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.icon {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}

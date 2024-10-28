@@ -1,0 +1,90 @@
+main {
+	margin: auto;
+	padding: 1rem;
+	width: 800px;
+	max-width: calc(100% - 2rem);
+	min-width: 450px;
+	color: white;
+	font-size: 20px;
+	line-height: 1.6;
+
+	display: flex; /* Enable flexbox for vertical centering */
+	flex-direction: column; /* Arrange items vertically */
+	justify-content: center; /* Center vertically */
+	align-items: center; /* Center horizontally */
+	min-height: 100vh; /* Full viewport height */
+}
+h1 {
+	font-size: 4rem;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	margin-bottom: 1rem; /* Fixed typo from 1rm to 1rem */
+}
+h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	margin-bottom: 1rem; /* Fixed typo from 1rm to 1rem */
+}
+p {
+	text-align: center;
+}
+.text-gradient {
+	background-image: var(--accent-gradient);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 400%;
+	background-position: 0%;
+	transition: background-position 0.5s ease;
+}
+.text-gradient:hover {
+	background-position: 100%; /* Changes the gradient position smoothly */
+}
+.project-group {
+	display: flex;
+	flex-wrap: wrap; /* Allows the items to wrap if the space is not enough */
+	gap: 20px; /* Adds space between the project cards */
+	justify-content: center; /* Center the projects horizontally */
+}
+.experience-group {
+	display: flex;
+	flex-wrap: wrap; /* Allows the items to wrap if the space is not enough */
+	gap: 10px; /* Adds space between the project cards */
+	justify-content: center; /* Center the projects horizontally */
+}
+.instructions {
+	margin-bottom: 2rem;
+	border: 1px solid rgba(var(--accent-light), 25%);
+	background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+	padding: 1.5rem;
+	border-radius: 8px;
+}
+.instructions code {
+	font-size: 0.8em;
+	font-weight: bold;
+	background: rgba(var(--accent-light), 12%);
+	color: rgb(var(--accent-light));
+	border-radius: 4px;
+	padding: 0.3em 0.4em;
+}
+.instructions strong {
+	color: rgb(var(--accent-light));
+}
+.link-card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+	gap: 2rem;
+	padding: 0;
+}
+.center {
+	text-align: center;
+}
+.social-list {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	list-style: none;
+	padding: 0;
+}

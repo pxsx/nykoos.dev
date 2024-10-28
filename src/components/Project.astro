@@ -1,13 +1,13 @@
 ---
 interface Props {
 	title: string;
-    href?: string;
+	href?: string;
 	desc: string;
 	gradient_start: string;
-    gradient_end: string;
+	gradient_end: string;
 }
 
-const { href, title, desc, gradient_start, gradient_end} = Astro.props;
+const { href, title, desc, gradient_start, gradient_end } = Astro.props;
 const isDisabled = !href;
 ---
 
@@ -24,129 +24,4 @@ const isDisabled = !href;
           View Project
         </a>
       )}
-  </div>
-
-  <style>
-    .project {
-    position: relative;
-      padding: 20px;
-      border-radius: 10px;
-      margin: 15px;
-      color: white;
-      width: 300px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease-in-out;
-      display: flex;
-      flex-direction: column;
-      background: linear-gradient(var(--gradient-start), var(--gradient-end));
-      overflow: hidden;
-    }
-
-    .project:hover {
-    transform: translateY(-5px);
-    }
-
-    .project::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Darken the background by 40% by default */
-  transition: opacity 0.5s ease-in-out; /* Smooth transition on hover */
-  opacity: 1; /* Start with the darkened state */
-  z-index: 0;
-  border-radius: 10px;
-}
-
-.project:hover::before {
-  opacity: 0; /* Remove the darkening overlay when hovered */
-}
-
-.project > * {
-  position: relative;
-  z-index: 1; /* Ensure content is above the overlay */
-}
-  
-    .project-title {
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-  
-    .project-desc {
-      flex-grow: 1;
-      margin-bottom: 15px;
-      font-size: 1em;
-    }
-  
-    .project-link {
-      text-decoration: none;
-      background-color: white;
-      color: #333;
-      padding: 10px 15px;
-      border-radius: 5px;
-      font-weight: bold;
-      text-align: center;
-    }
-    
-    .project-link.disabled {
-    background: grey; /* Grey for disabled link */
-    cursor: not-allowed;
-    position: relative;
-  }
-  .project-link.disabled:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-    animation: fadeInUp 0.5s ease forwards;
-  }
-
-  .tooltip {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    bottom: 100%; /* Position above the button */
-    left: 50%;
-    transform: translate(-50%, -10px); /* Center the tooltip */
-    background-color: rgba(51, 51, 51, 0.8); /* Slightly transparent background */
-    color: #fff;
-    text-align: center;
-    padding: 8px 12px; /* More padding for a softer look */
-    border-radius: 15px; /* Rounded corners */
-    white-space: nowrap;
-    z-index: 1;
-    transition: opacity 0.3s, transform 0.3s; /* Smooth opacity and position transition */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-    font-size: 14px; /* Slightly larger font size */
-}
-
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translate(-50%, 10px); /* Start slightly below */
-    }
-    100% {
-      opacity: 1;
-      transform: translate(-50%, 0); /* Move to its final position */
-    }
-  }
-
-  @keyframes brightness {
-    100% {
-      opacity: 1;
-      filter: brightness(1);
-    }
-  }
-
-  @keyframes backgroundBrightness {
-  100% {
-    background: linear-gradient(
-      rgba(255, 255, 255, 0.205), /* Example of a lighter overlay */
-      rgba(0, 0, 0, 0.5)
-    ), 
-    linear-gradient(var(--gradient-start), var(--gradient-end));
-  }
-}
-
-  </style>
+</div>
